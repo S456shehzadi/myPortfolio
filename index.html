@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sehar Shehzadi | Portfolio</title>
+    <meta name="description" content="Portfolio of Sehar Shehzadi, a Computer Science graduate specializing in Flutter, React Native, and PHP.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Using a CDN for Font Awesome for reliability -->
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/templatemo-main.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <!-- A little bit of style to make the sections distinct. You can move this to your CSS file. -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .section-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-heading h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+        }
+        .section-content {
+            padding: 80px 0;
+        }
+        
+        /* --- Style Changes for About Section --- */
+        #about .section-heading h2, #about .lead {
+             color: white; /* Set text color to white */
+        }
+
+        .project-card, .skill-card, .achievement-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        .project-card h4 {
+            font-weight: 700;
+        }
+        .project-card .tech-tags span {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .project-card .project-links a {
+            margin-right: 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .skill-list i {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #007bff;
+        }
+        .contact-info p {
+            font-size: 18px;
+        }
+         footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDE NAVIGATION BAR -->
+    <div class="fixed-side-navbar">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#home"><span>Home</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#about"><span>About Me</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects"><span>Projects</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills"><span>Skills</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#achievements"><span>Achievements</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"><span>Contact</span></a></li>
+        </ul>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="parallax-content baner-content" id="home">
+        <div class="container">
+            <div class="first-content">
+                <img src="./img/profile.jpeg" alt="Sehar Shehzadi" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid white; margin-bottom: 20px;">
+                <h1>Sehar Shehzadi</h1>
+                <span>Graduated Computer Science Student | <strong>Flutter, React Native & PHP</strong></span>
+                <div class="primary-button">
+                    <a href="#projects">View My Work</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT ME SECTION -->
+    <div class="service-content" id="about" style="background-color: #343a40;"> <!-- Added dark background color -->
+        <div class="container section-content">
+             <div class="section-heading">
+                <h2>About Me</h2>
+            </div>
+            <p class="lead text-center" style="max-width: 800px; margin: 0 auto;">
+                Passionate about turning ideas into impactful solutions, I'm a tech enthusiast with a keen eye for problem-solving and creativity. With a background in Computer Science, I thrive in collaborative environments where innovation meets execution. I specialize in cross-platform mobile development with Flutter and React Native, as well as backend development using PHP and Laravel. When I'm not coding or designing, you'll find me exploring new tools, sharing knowledge, and staying curious.
+            </p>
+        </div>
+    </div>
+
+    <!-- PROJECTS SECTION -->
+    <div class="section-content" id="projects" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-heading">
+                <h2>My Projects</h2>
+            </div>
+            <div class="row">
+                <!-- Project 1: Multigaming App -->
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h4>Multigaming Mobile Application</h4>
+                        <p>Developed a cross-platform mobile application featuring multiple games. Focused on creating a seamless user experience and a robust backend infrastructure.</p>
+                        <div class="tech-tags">
+                            <span>React Native</span> <span>PHP</span> <span>Laravel</span>
+                        </div>
+                        <div class="project-links mt-3">
+                            <a href="#0" target="_blank">Live Demo <i class="fa fa-external-link"></i></a>
+                            <a href="#0" target="_blank">Source Code <i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: Guardian App -->
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h4>Guardian App</h4>
+                        <p>Engineered 'Guardian App,' a personal safety and alert system for Android/iOS. Implemented backend functionalities, user authentication, and real-time data synchronization.</p>
+                        <div class="tech-tags">
+                            <span>Flutter</span> <span>Firebase</span>
+                        </div>
+                        <div class="project-links mt-3">
+                            <a href="#0" target="_blank">Live Demo <i class="fa fa-external-link"></i></a>
+                            <a href="#0" target="_blank">Source Code <i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: Dynamic Website -->
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h4>Dynamic Website Deployment</h4>
+                        <p>Created a fully functional website with a custom backend. Successfully configured and deployed the website online using Microsoft Azure cloud services, managing hosting and accessibility.</p>
+                        <div class="tech-tags">
+                            <span>HTML</span> <span>CSS</span> <span>PHP</span> <span>Microsoft Azure</span>
+                        </div>
+                         <div class="project-links mt-3">
+                            <a href="#0" target="_blank">Live Demo <i class="fa fa-external-link"></i></a>
+                            <a href="#0" target="_blank">Source Code <i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKILLS SECTION -->
+    <div class="section-content" id="skills">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="row">
+                 <div class="col-md-4">
+                    <div class="skill-card">
+                        <h4><i class="fa fa-code"></i> Programming & Frameworks</h4>
+                        <ul class="list-unstyled skill-list">
+                            <li>React Native</li>
+                            <li>Flutter</li>
+                            <li>PHP Laravel</li>
+                            <li>HTML & CSS</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <h4><i class="fa fa-cloud"></i> Cloud & Backend</h4>
+                        <ul class="list-unstyled skill-list">
+                            <li>Microsoft Azure</li>
+                            <li>Firebase</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <h4><i class="fa fa-cogs"></i> Professional Skills</h4>
+                         <ul class="list-unstyled skill-list">
+                            <li>Time Management</li>
+                            <li>Attention to Detail</li>
+                            <li>Clear Communication</li>
+                            <li>Active Listening</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <div class="section-content" id="achievements" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Achievements</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="achievement-card text-center">
+                        <i class="fa fa-trophy fa-3x text-warning mb-3"></i>
+                        <h4>2nd Position & Trophy</h4>
+                        <p>Business Idea Competition<br>(Uchenab University, 2023)</p>
+                    </div>
+                </div>
+                 <div class="col-md-4">
+                    <div class="achievement-card text-center">
+                        <i class="fa fa-star fa-3x text-primary mb-3"></i>
+                        <h4>InnovateX Participation</h4>
+                        <p>Recognized for active participation in Gift University's flagship innovation event (2024).</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="achievement-card text-center">
+                        <i class="fa fa-certificate fa-3x text-success mb-3"></i>
+                        <h4>Coursera Certifications</h4>
+                        <p>Completed multiple courses in Web and Cybersecurity (2022-2023), demonstrating a commitment to continuous learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="section-content" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="text-center contact-info">
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out!</p>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:seharshehzadi51@gmail.com">seharshehzadi51@gmail.com</a></p>
+                <p><i class="fa fa-phone"></i> +92 325 6261058</p>
+                <div class="mt-4">
+                    <a href="https://www.linkedin.com/in/sehar-fayyaz" target="_blank" class="btn btn-primary btn-lg">
+                        <i class="fa fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2025 Sehar Shehzadi</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links in the side nav
+          $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+                window.location.hash = hash;
+              });
+            }
+          });
+        });
+    </script>
+
+</body>
+</html>
