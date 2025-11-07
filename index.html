@@ -1,313 +1,804 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Sehar Shehzadi | Portfolio</title>
-    <meta name="description" content="Portfolio of Sehar Shehzadi, a Computer Science graduate specializing in Flutter, React Native, and PHP.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Sehar Shehzadi | Portfolio</title>
+  <meta name="description" content="Portfolio of Sehar Shehzadi — Flutter, React Native, PHP/Laravel. Futuristic glassmorphism UI over a neon code background." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://example.com/" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Using a CDN for Font Awesome for reliability -->
-    <link rel="stylesheet" href="css/hero-slider.css">
-    <link rel="stylesheet" href="css/templatemo-main.css">
-    <link rel="stylesheet" href="css/owl-carousel.css">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sehar Shehzadi | Portfolio" />
+  <meta property="og:description" content="Flutter, React Native, PHP/Laravel developer building polished mobile and web experiences." />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sehar Shehzadi | Portfolio" />
+  <meta name="twitter:description" content="Flutter, React Native, PHP/Laravel developer building polished mobile and web experiences." />
+  <meta name="twitter:image" content="https://example.com/og-image.jpg" />
 
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <!-- Preconnect for fonts performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <!-- A little bit of style to make the sections distinct. You can move this to your CSS file. -->
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
-        .section-heading {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .section-heading h2 {
-            font-size: 32px;
-            font-weight: 700;
-            color: #333;
-        }
-        .section-content {
-            padding: 80px 0;
-        }
-        
-        /* --- Style Changes for About Section --- */
-        #about .section-heading h2, #about .lead {
-             color: white; /* Set text color to white */
-        }
+  <!-- System assets (moved to external file suggestions below) -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-        .project-card, .skill-card, .achievement-card {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            height: 100%;
-        }
-        .project-card h4 {
-            font-weight: 700;
-        }
-        .project-card .tech-tags span {
-            background-color: #e9ecef;
-            color: #495057;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 12px;
-            margin-right: 5px;
-            display: inline-block;
-            margin-bottom: 5px;
-        }
-        .project-card .project-links a {
-            margin-right: 15px;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .skill-list i {
-            font-size: 24px;
-            margin-right: 10px;
-            color: #007bff;
-        }
-        .contact-info p {
-            font-size: 18px;
-        }
-         footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .social-icons a {
-            color: white;
-            margin: 0 10px;
-            font-size: 20px;
-        }
-    </style>
+  <style>
+    /* =========================
+       Base: tech-noir dark mode
+       ========================= */
+    :root{
+      --bg:#0a0f1a;
+      --glass:#0f1e30cc;      /* translucent layer */
+      --glass-soft:#0f1e3088; /* softer overlay */
+      --stroke:#1b314d99;
+      --neon:#28a5ff;
+      --neon-soft: rgba(40,165,255,.35);
+      --text:#e6f0ff;
+      --text-dim:#b7c6da;
+      --tag:#14253a;
+      --tag-text:#9fd6ff;
+      --card-shadow: 0 20px 60px rgba(0,0,0,.45), inset 0 0 0 1px var(--stroke);
+      --radius: 18px;
+      --blur: 18px;
+      --focus:#b4e0ff;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+      overflow-x:hidden;
+    }
+
+    /* Skip link for accessibility */
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+    .skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#00203b;color:#fff;padding:10px 14px;border-radius:10px;outline:2px solid var(--focus);z-index:9999}
+
+    /* Focus ring */
+    :where(a,button,[role="button"]):focus{outline:2px solid var(--focus); outline-offset:3px; border-radius:10px}
+
+    /* =========================
+       Neon AI animated background
+       ========================= */
+    .ai-bg{position:fixed; inset:0; z-index:-2}
+    .ai-bg canvas{position:absolute; inset:0; width:100%; height:100%; display:block}
+    .ai-bg:after{content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(140% 120% at 50% 60%, transparent 40%, rgba(0,0,0,.5) 100%); z-index:1;}
+
+    /* =========================
+       Side nav (neon glow active)
+       ========================= */
+    .fixed-side-navbar{position:fixed; top:50%; left:24px; transform:translateY(-50%); z-index:5; backdrop-filter: blur(10px);}    
+    .fixed-side-navbar nav{display:block}
+    .fixed-side-navbar .nav{gap:12px; padding:10px; border-radius:16px; background:linear-gradient(180deg, rgba(15,30,48,.35), rgba(15,30,48,.12)); box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 0 0 1px var(--stroke);}    
+    .fixed-side-navbar .nav-link{color:var(--text-dim); padding:10px 14px; border-radius:999px; font-weight:600; letter-spacing:.2px; text-decoration:none; position:relative; transition:color .2s ease, background .2s ease, box-shadow .2s ease;}
+    .fixed-side-navbar .nav-link:hover{ color:var(--text); background:rgba(40,165,255,.10); }
+    .fixed-side-navbar .nav-link.active{ color:#0a1120; background:var(--neon); box-shadow: 0 0 22px var(--neon-soft), 0 0 60px rgba(40,165,255,.25); }
+
+    /* Ensure content never sits under side nav on narrow screens */
+    @media(max-width:640px){ body{padding-left:72px} }
+
+    /* =========================
+       Page sections + glass cards
+       ========================= */
+    main>section{ position:relative; padding:110px 0; }
+    .section-heading{ max-width:1000px; margin:0 auto 28px; padding:0 20px; text-align:center; }
+    .section-heading h2{ font-size:36px; font-weight:800; letter-spacing:.2px; margin:0 0 8px; text-shadow: 0 0 18px var(--neon-soft); }
+    .section-sub{ color:var(--text-dim); margin:0 auto; max-width:820px; line-height:1.6; }
+    .glass{ background: linear-gradient(180deg, var(--glass), var(--glass-soft)); backdrop-filter: blur(var(--blur)); -webkit-backdrop-filter: blur(var(--blur)); border-radius: var(--radius); box-shadow: var(--card-shadow); border: 1px solid transparent; background-clip: padding-box; }
+    .glass.card{ padding:28px; }
+
+    /* Hero card */
+    .hero-card{ display:flex; align-items:center; gap:24px; padding:32px; }
+    .avatar{ width:120px;height:120px;border-radius:50%; flex:0 0 120px; border:2px solid rgba(255,255,255,.18); box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 40px rgba(40,165,255,.18) inset; background:#0b1626 url('./img/profile.jpeg') center/cover no-repeat; }
+    .hero-meta h1{ margin:0 0 6px; font-size:34px; font-weight:800; letter-spacing:.3px; }
+    .hero-meta .typing{ color:#cfeaff; font-weight:600 }
+
+    /* Project cards */
+    .projects-grid{ display:grid; gap:22px; grid-template-columns: repeat(12, 1fr); }
+    .project-card{ grid-column: span 12; }
+    @media(min-width:900px){ .project-card{ grid-column: span 4; } }
+    .project-card .title{ display:flex; align-items:center; gap:10px; margin:0 0 6px; }
+    .project-card .desc{ color:var(--text-dim); margin:0 0 12px; min-height:52px; }
+    .tech-tags{ display:flex; flex-wrap:wrap; gap:8px; }
+    .tag{ padding:6px 10px; border-radius:999px; background:var(--tag); color:var(--tag-text); font-size:12.5px; font-weight:700; letter-spacing:.2px; border:1px solid #254565; }
+    .project-links{ display:flex; gap:12px; margin-top:12px; }
+    .chip-link{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:12px; text-decoration:none; font-weight:700; letter-spacing:.2px; color:#cfeaff; background:linear-gradient(180deg, rgba(40,165,255,.12), rgba(40,165,255,.07)); border:1px solid rgba(40,165,255,.25); box-shadow: inset 0 0 0 1px rgba(255,255,255,.05); transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .chip-link:hover{ transform: translateY(-1px); box-shadow: 0 10px 26px rgba(40,165,255,.15), 0 0 30px rgba(40,165,255,.15); background:linear-gradient(180deg, rgba(40,165,255,.20), rgba(40,165,255,.07)); }
+
+    /* Skills */
+    .skills-grid{ display:grid; gap:22px; grid-template-columns: repeat(12, 1fr); }
+    .skill-card{ grid-column: span 12; }
+    @media(min-width:900px){ .skill-card{ grid-column: span 4; } }
+    .skill-card h4{ margin:0 0 10px; display:flex; align-items:center; gap:10px; }
+    .skill-list{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+    .skill-list li{ color:#d5e6ff; }
+
+    /* Achievements */
+    .ach-grid{ display:grid; gap:22px; grid-template-columns: repeat(12, 1fr); }
+    .ach-card{ grid-column: span 12; text-align:center; padding:28px; }
+    @media(min-width:900px){ .ach-card{ grid-column: span 4; } }
+
+    /* Contact */
+    .contact-card{ padding:32px; text-align:center; }
+    .contact-card a{ color:#cfeaff; text-decoration:none; border-bottom:1px dotted rgba(207,234,255,.45); }
+    .contact-card a:hover{ color:#fff; }
+
+    /* Footer */
+    footer{ padding:32px 0; text-align:center; color:#9bb0c8; }
+
+    /* =========================
+       Scroll reveal animations
+       ========================= */
+    .reveal{ opacity:0; transform: translateY(18px) scale(.995); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in{ opacity:1; transform: none; }
+
+    /* Card hover lift */
+    .lift{ transition: transform .25s ease, box-shadow .25s ease; }
+    .lift:hover{ transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,0,0,.55), inset 0 0 0 1px #2a4b70; }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; } .lift, .chip-link{ transition:none } }
+  
+
+    /* Layout compensation so content never sits under the side nav */
+    :root{ --side-nav-space: 148px; }
+    main{ padding-left: var(--side-nav-space); }
+    /* Tweak spacing responsively */
+    @media (max-width: 1200px){ :root{ --side-nav-space: 128px; } }
+    @media (max-width: 992px){ :root{ --side-nav-space: 108px; } }
+    @media (max-width: 768px){ :root{ --side-nav-space: 88px; } }
+    /* On very small screens, make nav non-overlapping and reduce padding */
+    @media (max-width: 600px){
+      :root{ --side-nav-space: 24px; }
+      .fixed-side-navbar{ position:sticky; top:16px; left:16px; transform:none; }
+    }
+  
+
+    /* =========================
+       FUI boot-up: glitch + decode + scanline
+       ========================= */
+    .fui-card{ position:relative; overflow:hidden; }
+    /* Initial state for advanced reveal */
+    .fui-card{ opacity:0; transform: translateY(14px) scale(.995); }
+
+    /* Glitch/noise pass on the panel */
+    .fui-card.fx-glitch::before,
+    .fui-card.fx-glitch::after{
+      content:""; position:absolute; inset:-2px; pointer-events:none; mix-blend-mode:screen;
+      background:
+        repeating-linear-gradient(0deg, rgba(40,165,255,.18) 0 2px, rgba(0,0,0,0) 2px 4px),
+        repeating-linear-gradient(90deg, rgba(40,165,255,.08) 0 3px, rgba(0,0,0,0) 3px 6px);
+      filter:contrast(1.2) saturate(1.1);
+      animation: fuiGlitch 220ms steps(12) infinite;
+    }
+    .fui-card.fx-glitch::after{ transform: translate3d(0,0,0); background-blend-mode:screen; opacity:.65 }
+    @keyframes fuiGlitch{
+      0%{ clip-path: inset(0 0 70% 0); transform:translate(0,0) }
+      25%{ clip-path: inset(10% 0 40% 0); transform:translate(-1px,1px) }
+      50%{ clip-path: inset(40% 0 20% 0); transform:translate(1px,-1px) }
+      75%{ clip-path: inset(65% 0 5% 0); transform:translate(-1px,0) }
+      100%{ clip-path: inset(0 0 0 0); transform:translate(0,0) }
+    }
+
+    /* Panel resolves into place */
+    .fui-card.fx-panel-in{ opacity:1; transform:none; transition:opacity .28s ease-out, transform .28s ease-out; }
+
+    /* Inner content decode/stagger */
+    .fui-chunk{ opacity:0; transform:translateY(8px); filter:blur(6px); }
+    .fui-chunk.fx-decode{ animation: fuiDecode .38s cubic-bezier(.2,.6,.2,1) forwards; }
+    @keyframes fuiDecode{ to{ opacity:1; transform:none; filter:blur(0) } }
+
+    /* High-speed type-in for text lines */
+    .fui-type{ white-space:pre-wrap; position:relative }
+    .fui-type.fx-caret::after{
+      content:""; position:absolute; width:1px; top:0; bottom:0; right:-1px; background:var(--neon);
+      animation:fuiCaret 600ms steps(1) infinite;
+    }
+    @keyframes fuiCaret{ 0%,49%{opacity:1} 50%,100%{opacity:0} }
+
+    /* Project images (or thumbnails) scanline + flicker */
+    .fui-scanline{ position:relative; opacity:0 }
+    .fui-scanline.fx-in{ animation: fuiScanlineIn .42s ease-out forwards; }
+    .fui-scanline::after{
+      content:""; position:absolute; inset:0; pointer-events:none;
+      background: repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 1px, transparent 1px 3px);
+      mix-blend-mode: soft-light; opacity:0; animation: fuiScan 1.2s linear infinite;
+    }
+    @keyframes fuiScan{ 0%{transform:translateY(-10%)} 100%{transform:translateY(10%)} }
+    @keyframes fuiScanlineIn{ 0%{ opacity:0; filter:brightness(1.6) contrast(1.2)} 100%{ opacity:1; filter:none } }
+
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sehar Shehzadi",
+    "url": "https://example.com/",
+    "jobTitle": "Mobile App & Web Developer",
+    "sameAs": ["https://www.linkedin.com/in/sehar-fayyaz","https://github.com/S456shehzadi"],
+    "knowsAbout": ["Flutter","React Native","Laravel","Firebase","Azure"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- SIDE NAVIGATION BAR -->
-    <div class="fixed-side-navbar">
-        <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#home"><span>Home</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#about"><span>About Me</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects"><span>Projects</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills"><span>Skills</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#achievements"><span>Achievements</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact"><span>Contact</span></a></li>
-        </ul>
-    </div>
+  <!-- Animated neon code background -->
+  <div class="ai-bg" aria-hidden="true">
+    <canvas id="ai-neon"></canvas>
+  </div>
 
-    <!-- HERO SECTION -->
-    <div class="parallax-content baner-content" id="home">
-        <div class="container">
-            <div class="first-content">
-                <img src="./img/profile.jpeg" alt="Sehar Shehzadi" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid white; margin-bottom: 20px;">
-                <h1>Sehar Shehzadi</h1>
-                <span>Graduated Computer Science Student | <strong>Flutter, React Native & PHP</strong></span>
-                <div class="primary-button">
-                    <a href="#projects">View My Work</a>
-                </div>
+  <!-- SIDE NAV -->
+  <div class="fixed-side-navbar" aria-label="Section navigation">
+    <nav role="navigation" aria-labelledby="sections-label">
+      <h2 id="sections-label" class="sr-only" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Sections</h2>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main" tabindex="-1">
+    <!-- HOME / HERO -->
+    <section id="home" aria-label="Home">
+      <div class="container">
+        <div class="glass card hero-card reveal lift">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="hero-meta">
+            <h1>Sehar Shehzadi</h1>
+            <div class="typing" id="typing" aria-live="polite">Loading…</div>
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <span class="tag">Flutter</span>
+              <span class="tag">React&nbsp;Native</span>
+              <span class="tag">PHP&nbsp;/ Laravel</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Azure</span>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- ABOUT ME SECTION -->
-    <div class="service-content" id="about" style="background-color: #343a40;"> <!-- Added dark background color -->
-        <div class="container section-content">
-             <div class="section-heading">
-                <h2>About Me</h2>
-            </div>
-            <p class="lead text-center" style="max-width: 800px; margin: 0 auto;">
-                Passionate about turning ideas into impactful solutions, I'm a tech enthusiast with a keen eye for problem-solving and creativity. With a background in Computer Science, I thrive in collaborative environments where innovation meets execution. I specialize in cross-platform mobile development with Flutter and React Native, as well as backend development using PHP and Laravel. When I'm not coding or designing, you'll find me exploring new tools, sharing knowledge, and staying curious.
-            </p>
+    <!-- ABOUT -->
+    <section id="about" aria-label="About Me">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About Me</h2>
+          <p class="section-sub">I turn ideas into polished digital experiences. I build cross-platform mobile apps with Flutter/React Native and craft reliable backends using PHP/Laravel, deployed on Firebase/Azure.</p>
         </div>
-    </div>
-
-    <!-- PROJECTS SECTION -->
-    <div class="section-content" id="projects" style="background-color: #f8f9fa;">
-        <div class="container">
-            <div class="section-heading">
-                <h2>My Projects</h2>
-            </div>
-            <div class="row">
-                <!-- Project 1: Multigaming App -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h4>Multigaming Mobile Application</h4>
-                        <p>Developed a cross-platform mobile application featuring multiple games. Focused on creating a seamless user experience and a robust backend infrastructure.</p>
-                        <div class="tech-tags">
-                            <span>React Native</span> <span>PHP</span> <span>Laravel</span>
-                        </div>
-                        <div class="project-links mt-3">
-                            <a href="#0" target="_blank">Live Demo <i class="fa fa-external-link"></i></a>
-                            <a href="#0" target="_blank">Source Code <i class="fa fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2: Guardian App -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h4>Guardian App</h4>
-                        <p>Engineered 'Guardian App,' a personal safety and alert system for Android/iOS. Implemented backend functionalities, user authentication, and real-time data synchronization.</p>
-                        <div class="tech-tags">
-                            <span>Flutter</span> <span>Firebase</span>
-                        </div>
-                        <div class="project-links mt-3">
-                            <a href="#0" target="_blank">Live Demo <i class="fa fa-external-link"></i></a>
-                            <a href="#0" target="_blank">Source Code <i class="fa fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3: Dynamic Website -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h4>Dynamic Website Deployment</h4>
-                        <p>Created a fully functional website with a custom backend. Successfully configured and deployed the website online using Microsoft Azure cloud services, managing hosting and accessibility.</p>
-                        <div class="tech-tags">
-                            <span>HTML</span> <span>CSS</span> <span>PHP</span> <span>Microsoft Azure</span>
-                        </div>
-                         <div class="project-links mt-3">
-                            <a href="#0" target="_blank">Live Demo <i class="fa fa-external-link"></i></a>
-                            <a href="#0" target="_blank">Source Code <i class="fa fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="glass card reveal lift">
+          <p style="margin:0; color:#d5e6ff; line-height:1.8;">Passionate about UI/UX and performance, I care about clean code, thoughtful systems, and shipping value. I thrive in collaborative teams and love learning new tools.</p>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- SKILLS SECTION -->
-    <div class="section-content" id="skills">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Technical Skills</h2>
-            </div>
-            <div class="row">
-                 <div class="col-md-4">
-                    <div class="skill-card">
-                        <h4><i class="fa fa-code"></i> Programming & Frameworks</h4>
-                        <ul class="list-unstyled skill-list">
-                            <li>React Native</li>
-                            <li>Flutter</li>
-                            <li>PHP Laravel</li>
-                            <li>HTML & CSS</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card">
-                        <h4><i class="fa fa-cloud"></i> Cloud & Backend</h4>
-                        <ul class="list-unstyled skill-list">
-                            <li>Microsoft Azure</li>
-                            <li>Firebase</li>
-                            <li>Database Management</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card">
-                        <h4><i class="fa fa-cogs"></i> Professional Skills</h4>
-                         <ul class="list-unstyled skill-list">
-                            <li>Time Management</li>
-                            <li>Attention to Detail</li>
-                            <li>Clear Communication</li>
-                            <li>Active Listening</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- PROJECTS -->
+    <section id="projects" aria-label="Projects">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Projects</h2>
+          <p class="section-sub">Selected work—concise, robust, and user-centric.</p>
         </div>
-    </div>
 
-    <!-- ACHIEVEMENTS SECTION -->
-    <div class="section-content" id="achievements" style="background-color: #f8f9fa;">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Achievements</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="glass card project-card reveal lift" aria-labelledby="p1-title">
+            <div class="title"><i class="fa fa-gamepad" aria-hidden="true"></i><h3 id="p1-title" style="margin:0">Multigaming Mobile Application</h3></div>
+            <p class="desc">Cross-platform mobile app featuring multiple casual games, smooth UX, and a scalable backend.</p>
+            <div class="tech-tags" aria-label="Technologies">
+              <span class="tag">React Native</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Laravel</span>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="achievement-card text-center">
-                        <i class="fa fa-trophy fa-3x text-warning mb-3"></i>
-                        <h4>2nd Position & Trophy</h4>
-                        <p>Business Idea Competition<br>(Uchenab University, 2023)</p>
-                    </div>
-                </div>
-                 <div class="col-md-4">
-                    <div class="achievement-card text-center">
-                        <i class="fa fa-star fa-3x text-primary mb-3"></i>
-                        <h4>InnovateX Participation</h4>
-                        <p>Recognized for active participation in Gift University's flagship innovation event (2024).</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="achievement-card text-center">
-                        <i class="fa fa-certificate fa-3x text-success mb-3"></i>
-                        <h4>Coursera Certifications</h4>
-                        <p>Completed multiple courses in Web and Cybersecurity (2022-2023), demonstrating a commitment to continuous learning.</p>
-                    </div>
-                </div>
+            <div class="project-links">
+              <a class="chip-link" href="#0" target="_blank" rel="noopener"> <i class="fa fa-external-link" aria-hidden="true"></i> <span>Live Demo</span></a>
+              <a class="chip-link" href="#0" target="_blank" rel="noopener"> <i class="fa fa-github" aria-hidden="true"></i> <span>Source</span></a>
             </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="glass card project-card reveal lift" aria-labelledby="p2-title">
+            <div class="title"><i class="fa fa-shield" aria-hidden="true"></i><h3 id="p2-title" style="margin:0">Guardian App</h3></div>
+            <p class="desc">Personal safety & alert app for Android/iOS with real-time sync and secure authentication.</p>
+            <div class="tech-tags" aria-label="Technologies">
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase</span>
+            </div>
+            <div class="project-links">
+              <a class="chip-link" href="https://github.com/S456shehzadi/Mobile-App" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> <span>Source</span></a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="glass card project-card reveal lift" aria-labelledby="p3-title">
+            <div class="title"><i class="fa fa-globe" aria-hidden="true"></i><h3 id="p3-title" style="margin:0">Dynamic Website Deployment</h3></div>
+            <p class="desc">Full-stack website with custom backend and live deployment—managed hosting and accessibility.</p>
+            <div class="tech-tags" aria-label="Technologies">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Microsoft Azure</span>
+            </div>
+            <div class="project-links">
+              <a class="chip-link" href="https://s456shehzadi.github.io/Web-Development/" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> <span>Live Demo</span></a>
+              <a class="chip-link" href="https://github.com/S456shehzadi/Web-Development" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> <span>Source</span></a>
+            </div>
+          </article>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- CONTACT SECTION -->
-    <div class="section-content" id="contact">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Get In Touch</h2>
-            </div>
-            <div class="text-center contact-info">
-                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out!</p>
-                <p><i class="fa fa-envelope"></i> <a href="mailto:seharshehzadi51@gmail.com">seharshehzadi51@gmail.com</a></p>
-                <p><i class="fa fa-phone"></i> +92 325 6261058</p>
-                <div class="mt-4">
-                    <a href="https://www.linkedin.com/in/sehar-fayyaz" target="_blank" class="btn btn-primary btn-lg">
-                        <i class="fa fa-linkedin"></i> Connect on LinkedIn
-                    </a>
-                </div>
-            </div>
+    <!-- SKILLS -->
+    <section id="skills" aria-label="Skills">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Skills</h2>
+          <p class="section-sub">Tools and strengths I use to build.</p>
         </div>
-    </div>
 
-    <footer>
-        <div class="container">
-            <p>Copyright © 2025 Sehar Shehzadi</p>
+        <div class="skills-grid">
+          <div class="glass card skill-card reveal lift">
+            <h4><i class="fa fa-code" aria-hidden="true"></i> Programming & Frameworks</h4>
+            <ul class="skill-list">
+              <li>Flutter · React Native</li>
+              <li>PHP (Laravel) · REST APIs</li>
+              <li>HTML · CSS · Responsive UI</li>
+              <li>State management · Auth</li>
+            </ul>
+          </div>
+
+          <div class="glass card skill-card reveal lift">
+            <h4><i class="fa fa-cloud" aria-hidden="true"></i> Cloud & Backend</h4>
+            <ul class="skill-list">
+              <li>Firebase (Auth, Firestore, Storage)</li>
+              <li>Microsoft Azure (hosting & deployment)</li>
+              <li>SQL · Database design</li>
+            </ul>
+          </div>
+
+          <div class="glass card skill-card reveal lift">
+            <h4><i class="fa fa-cogs" aria-hidden="true"></i> Professional</h4>
+            <ul class="skill-list">
+              <li>Time management · Communication</li>
+              <li>Agile collaboration · Documentation</li>
+              <li>Presentation · Problem solving</li>
+            </ul>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function(){
-          // Add smooth scrolling to all links in the side nav
-          $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
-            if (this.hash !== "") {
-              event.preventDefault();
-              var hash = this.hash;
-              $('html, body').animate({
-                scrollTop: $(hash).offset().top
-              }, 800, function(){
-                window.location.hash = hash;
-              });
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" aria-label="Achievements">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Achievements</h2>
+          <p class="section-sub">Highlights from my journey.</p>
+        </div>
+        <div class="ach-grid">
+          <div class="glass card ach-card reveal lift">
+            <i class="fa fa-trophy fa-2x" style="color:#ffde7d" aria-hidden="true"></i>
+            <h4 style="margin:10px 0 6px">2nd Position & Trophy</h4>
+            <p class="section-sub" style="margin:0">Business Idea Competition — Uchenab University (2023)</p>
+          </div>
+          <div class="glass card ach-card reveal lift">
+            <i class="fa fa-star fa-2x" style="color:#7dc8ff" aria-hidden="true"></i>
+            <h4 style="margin:10px 0 6px">InnovateX Participation</h4>
+            <p class="section-sub" style="margin:0">Gift University (2024)</p>
+          </div>
+          <div class="glass card ach-card reveal lift">
+            <i class="fa fa-certificate fa-2x" style="color:#8bffaa" aria-hidden="true"></i>
+            <h4 style="margin:10px 0 6px">Coursera Certifications</h4>
+            <p class="section-sub" style="margin:0">Web & Cybersecurity (2022–2023)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Get In Touch</h2>
+          <p class="section-sub">Open to roles, freelance projects, and collaborations.</p>
+        </div>
+        <div class="glass card contact-card reveal lift">
+          <p style="margin:0 0 10px;">Email: <a href="mailto:seharshehzadi51@gmail.com">seharshehzadi51@gmail.com</a></p>
+          <p style="margin:0 0 18px;">Phone: +92 325 6261058</p>
+          <a class="chip-link" href="https://www.linkedin.com/in/sehar-fayyaz" target="_blank" rel="noopener">
+            <i class="fa fa-linkedin" aria-hidden="true"></i> <span>Connect on LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <small>© 2025 Sehar Shehzadi</small>
+    </div>
+  </footer>
+
+  <!-- Vendor -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+
+  <!-- Typing effect -->
+  <script>
+    (function(){
+      const phrases = [
+        "Mobile App & Web Developer",
+        "Flutter · React Native · PHP/Laravel",
+        "Cloud: Firebase & Azure"
+      ];
+      const el = document.getElementById('typing');
+      let p = 0, i = 0, del = false, pause = 1000;
+      function type() {
+        if (!el) return;
+        const full = phrases[p];
+        if (!del) {
+          el.textContent = full.slice(0, ++i);
+          if (i === full.length) { del = true; setTimeout(type, pause); return; }
+        } else {
+          el.textContent = full.slice(0, --i);
+          if (i === 0) { del = false; p = (p + 1) % phrases.length; }
+        }
+        setTimeout(type, del ? 30 : 55);
+      }
+      type();
+    })();
+  </script>
+
+  <!-- Advanced FUI boot-up sequencing -->
+  <script>
+    (function(){
+      function markFUI(){
+        document.querySelectorAll('.glass.card').forEach(card=>{
+          card.classList.add('fui-card');
+          // Find animated chunks inside each card (headings, text, badges, links, icons)
+          const chunks = card.querySelectorAll('h1,h2,h3,h4,p,li,.tag,.chip-link,i,ul,ol');
+          let idx=0;
+          chunks.forEach(el=>{
+            el.classList.add('fui-chunk');
+            el.style.setProperty('--fui-index', idx++);
+            // If it's a text block, prep type animation
+            if(/^(P|LI|H1|H2|H3|H4)$/.test(el.tagName)){
+              const txt = el.textContent.trim();
+              el.dataset.fuiText = txt;
+              el.textContent = txt; // keep initial for no-js flash
             }
           });
-        });
-    </script>
 
+          // Any images inside projects can get scanline
+          card.querySelectorAll('img').forEach(img=>{
+            img.classList.add('fui-scanline');
+          });
+        });
+      }
+
+      function typeIn(el, cps){
+        if(el.dataset.fuiTyped) return; // run once
+        const txt = el.dataset.fuiText || el.textContent || '';
+        const speed = Math.max(12, cps||28); // characters per 40ms tick equivalent
+        let i = 0; el.textContent = ''; el.classList.add('fui-type','fx-caret');
+        function tick(){
+          // push a chunk each frame for speed
+          const step = Math.ceil(speed/28); // fast but readable
+          el.textContent += txt.slice(i, i+step);
+          i += step;
+          if(i < txt.length){ requestAnimationFrame(tick); }
+          else { el.classList.remove('fx-caret'); }
+        }
+        requestAnimationFrame(tick);
+        el.dataset.fuiTyped = '1';
+      }
+
+      function sequenceCard(card){
+        if(card.dataset.fuiDone) return;
+        card.dataset.fuiDone = '1';
+        // 1) Glitch pass
+        card.classList.add('fx-glitch');
+        setTimeout(()=>{
+          card.classList.remove('fx-glitch');
+          // 2) Panel resolve
+          card.classList.add('fx-panel-in');
+          // 3) Staggered content decode
+          const chunks = card.querySelectorAll('.fui-chunk');
+          chunks.forEach((el, i)=>{
+            setTimeout(()=>{
+              el.classList.add('fx-decode');
+              // High-speed type for main text-like elements
+              if(/^(P|LI|H1|H2|H3|H4)$/.test(el.tagName)) typeIn(el, 42);
+              // Scanline image pop-in
+              if(el.tagName === 'IMG'){ el.classList.add('fx-in'); }
+            }, 40 + i*40); // crisp, fast cascade
+          });
+        }, 220); // quick glitch burst
+      }
+
+      // Prepare DOM
+      markFUI();
+
+      // IntersectionObserver for cards
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){ sequenceCard(entry.target); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.25 });
+      document.querySelectorAll('.fui-card').forEach(el=>io.observe(el));
+
+    })();
+  </script>
+
+  <!-- Scroll: smooth + reveal + active nav neon -->
+  <script>
+    (function(){
+      // Smooth scroll + hash update
+      document.querySelectorAll('.fixed-side-navbar .nav-link').forEach(a=>{
+        a.addEventListener('click', e=>{
+          const target = document.querySelector(a.getAttribute('href'));
+          if(target){
+            e.preventDefault();
+            target.scrollIntoView({behavior:'smooth', block:'start'});
+            history.replaceState(null, '', a.getAttribute('href'));
+          }
+        });
+      });
+
+      // Reveal on view
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('in'); });
+      }, {threshold:0.15});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+      // Active section highlight
+      const links = Array.from(document.querySelectorAll('.fixed-side-navbar .nav-link'));
+      const sections = ['home','about','projects','skills','achievements','contact'].map(id => document.getElementById(id));
+      function setActiveById(id){ links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#'+id)); }
+      const spy = ()=>{
+        const y = window.scrollY + window.innerHeight * 0.33;
+        let current = sections[0] && sections[0].id;
+        for(const s of sections){ if(s && s.offsetTop <= y) current = s.id; }
+        if(current) setActiveById(current);
+      };
+      spy();
+      window.addEventListener('scroll', spy, {passive:true});
+      window.addEventListener('hashchange', () => { const id = location.hash.replace('#',''); if(id) setActiveById(id); }, {passive:true});
+      window.addEventListener('load', () => { const id = location.hash.replace('#',''); if(id){ const t = document.getElementById(id); if(t) t.setAttribute('tabindex','-1'), t.focus(); setActiveById(id);} });
+    })();
+  </script>
+
+  <!-- ===== Neon AI Code Background (iterative, seamless, continuous) ===== -->
+  <script>
+  (function(){
+    const canvas = document.getElementById('ai-neon');
+    const ctx = canvas.getContext('2d', { alpha: true });
+
+    // HiDPI + resize
+    let W=0, H=0, DPR=1;
+    function resize(){
+      const dpr = Math.min(2.5, window.devicePixelRatio || 1);
+      const cw = canvas.clientWidth, ch = canvas.clientHeight;
+      if (cw===W && ch===H && dpr===DPR) return;
+      DPR = dpr; W = cw; H = ch;
+      canvas.width  = Math.floor(W * DPR);
+      canvas.height = Math.floor(H * DPR);
+      ctx.setTransform(DPR,0,0,DPR,0,0);
+      buildGridPattern();
+      if (!initialized) initOnce();
+    }
+    const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Loop timing (iterative + seamless)
+    const LOOP_SEC = 24;
+    const SPEED    = REDUCED ? 0.6 : 1.0;
+    let  t0 = performance.now();
+    let  last = t0;
+    document.addEventListener('visibilitychange', () => { last = performance.now(); });
+    function stepTime(){
+      const now = performance.now();
+      let dt = (now - last) / 1000; if (dt > 0.05) dt = 0.05;
+      last = now;
+      const loopT = ((now - t0)/1000 % LOOP_SEC) / LOOP_SEC; // [0,1)
+      return { dt, loopT, now };
+    }
+
+    // Helpers
+    const GLYPHS = "01{}[]()<>:+-*/&|^~#!?;.,";
+    function neonStroke(color, glow, w){ ctx.strokeStyle=color; ctx.lineWidth=w; ctx.shadowBlur=glow; ctx.shadowColor=color; }
+    function neonFill(color, glow){ ctx.fillStyle=color; ctx.shadowBlur=glow; ctx.shadowColor=color; }
+    function hash(n){ n = (n<<13) ^ n; return (1.0 - ((n*(n*n*15731 + 789221) + 1376312589) & 0x7fffffff)/1073741824.0); }
+    function pickGlyph(i, k, frame){ const m = GLYPHS.length; const idx = Math.abs(Math.floor((i*73856093 + k*19349663 + frame*3) % m)); return GLYPHS[idx]; }
+    function lerp(a,b,t){ return a+(b-a)*t }
+    function lerp2(p,q,u){ return [lerp(p[0],q[0],u), lerp(p[1],q[1],u)] }
+    function dist(p,q){ const dx=p[0]-q[0], dy=p[1]-q[1]; return Math.hypot(dx,dy) }
+
+    // Shapes
+    function sampleEdges(edges, n){
+      let total=0; const lens=[];
+      for(const [p,q] of edges){ const d=dist(p,q); lens.push(d); total+=d; }
+      const pts=[]; let acc=0, seg=0, segAcc=lens[0]||1;
+      for(let k=0;k<n;k++){
+        const t = (k/Math.max(1,n-1))*total;
+        while(t>segAcc && seg<edges.length-1){ seg++; acc=segAcc; segAcc+=lens[seg]; }
+        const [p,q]=edges[seg] || edges[0]; const u=(t-acc)/Math.max(1e-6,(lens[seg]||1));
+        pts.push(lerp2(p,q,u));
+      }
+      return pts;
+    }
+    function shapeBrain(n){
+      const pts=[]; const a=0.56, b=0.75;
+      for(let i=0;i<n;i++){
+        const t = i/n * Math.PI*2;
+        const r = 0.72 + 0.08*Math.sin(6*t) + 0.05*Math.sin(12*t+0.7);
+        pts.push([Math.cos(t)*a*r, Math.sin(t)*b*r]);
+      }
+      return pts;
+    }
+    function shapeCube(n){
+      const A=[-0.7, 0.4], B=[ 0.1, 0.7], C=[ 0.7, 0.2];
+      const D=[-0.1,-0.1], E=[ 0.7,-0.4], F=[ 0.0,-0.7];
+      const edges=[[A,B],[B,C],[C,D],[D,A],[A,F],[B,E],[C,E],[D,F],[F,E]];
+      return sampleEdges(edges, n);
+    }
+    function shapeNeural(n){
+      const L1=[[-0.8,-0.5],[-0.8,0],[-0.8,0.5]];
+      const L2=[[-0.2,-0.6],[-0.2,-0.2],[-0.2,0.2],[-0.2,0.6]];
+      const L3=[[ 0.4,-0.5],[ 0.4,0.1],[ 0.4,0.6]];
+      const edges=[];
+      for(const a of L1) for(const b of L2) edges.push([a,b]);
+      for(const a of L2) for(const b of L3) edges.push([a,b]);
+      edges.push([[-0.9, 0.75],[ 0.6, 0.75]]);
+      edges.push([[-0.9,-0.75],[ 0.6,-0.75]]);
+      return sampleEdges(edges, n);
+    }
+
+    // Targets & cosine blend (continuous)
+    const P_COUNT = 1400;
+    const SHAPES = ['brain','neural','cube'];
+    let TARGETS = null;
+    function buildTargets(){
+      TARGETS = { brain:  shapeBrain(P_COUNT), neural: shapeNeural(P_COUNT), cube:   shapeCube(P_COUNT) };
+    }
+    function mapToScreen(p){ return [ (p[0]*0.9+0.5)*W, (p[1]*0.9+0.5)*H ] }
+    function blendedTarget(u, i){
+      const phase = u * 3, seg = Math.floor(phase) % 3, t = phase - seg;
+      const w = 0.5 - 0.5*Math.cos(t*Math.PI);
+      const aName = SHAPES[seg], bName = SHAPES[(seg+1)%3];
+      const a = TARGETS[aName][i], b = TARGETS[bName][i];
+      return mapToScreen([ a[0] + (b[0]-a[0])*w, a[1] + (b[1]-a[1])*w ]);
+    }
+
+    // Streams (deterministic)
+    let streams = [];
+    function initStreams(){
+      const cols = Math.max(24, Math.floor(W/24));
+      streams = new Array(cols);
+      for(let i=0;i<cols;i++){
+        const x = (i+0.5)*(W/cols);
+        const dir = (i % 2 === 0) ? 1 : -1;
+        const vy  = (90 + (i%7)*12) * SPEED;
+        const wobble = (i*0.37) % (Math.PI*2);
+        streams[i] = { x, dir, vy, wobbleBase: wobble };
+      }
+    }
+    function streamY(i, t){
+      const s = streams[i];
+      const period = (H + 400) / s.vy;
+      const phase  = (t / period) % 1;
+      return s.dir>0 ? (-200 + phase*(H+400)) : (H+200 - phase*(H+400));
+    }
+
+    // Particles
+    let particles = [];
+    function initParticles(){
+      particles = new Array(P_COUNT);
+      for(let i=0;i<P_COUNT;i++){
+        const r1 = hash(i*92821)*0.5+0.5, r2 = hash(i*1259)*0.5+0.5;
+        const sgn = (hash(i*733)+1) > 1 ? 1 : -1;
+        particles[i] = { x: r1 * W, y: r2 * H, vx: (20 + (i%11)*3) * sgn * SPEED, vy: (hash(i*5813))*30*SPEED - 15*SPEED, t:  r1*2*Math.PI };
+      }
+    }
+
+    // Grid pattern cache
+    let gridPattern = null;
+    function buildGridPattern(){
+      const step = Math.max(40, Math.floor(W/36));
+      const off = document.createElement('canvas');
+      off.width = step; off.height = step;
+      const g = off.getContext('2d');
+      g.strokeStyle = 'rgba(20,60,100,0.25)';
+      g.lineWidth = 1;
+      g.beginPath(); g.moveTo(0,0); g.lineTo(0,step); g.stroke();
+      g.beginPath(); g.moveTo(0,0); g.lineTo(step,0); g.stroke();
+      gridPattern = ctx.createPattern(off, 'repeat');
+    }
+
+    // Init
+    let initialized = false;
+    function initOnce(){ if (!initialized){ buildTargets(); initStreams(); initParticles(); initialized = true; } }
+
+    // Draw helpers
+    function drawGrid(){ if (!gridPattern) return; ctx.save(); ctx.globalAlpha = 0.25; ctx.fillStyle = gridPattern; ctx.fillRect(0,0,W,H); ctx.restore(); }
+    function drawWireframe(u){ neonStroke('rgba(40,165,255,0.8)', 18, 1.2); ctx.beginPath(); for(let i=0;i<P_COUNT;i+=6){ const s = blendedTarget(u, i); if(i===0) ctx.moveTo(s[0], s[1]); else ctx.lineTo(s[0], s[1]); } ctx.stroke(); }
+    function drawStreams(t, frame){
+      const charH = Math.max(12, Math.floor(H/60));
+      for(let i=0;i<streams.length;i++){
+        const s = streams[i];
+        const y0 = streamY(i, t);
+        const wobble = s.wobbleBase + t*0.6*s.dir;
+        const x = s.x + Math.sin(wobble)*10;
+        for(let k=0;k<14;k++){
+          const a = Math.max(0, 1 - k/14);
+          ctx.save();
+          neonFill(`rgba(40,165,255,${0.14 + 0.5*a})`, 8*a);
+          ctx.font = `${charH}px Consolas, Menlo, Monaco, monospace`;
+          const ch = pickGlyph(i, k, frame);
+          ctx.fillText(ch, x, y0 - k*charH * (s.dir>0?1:-1));
+          ctx.restore();
+        }
+      }
+    }
+
+    // Loop
+    function tick(frame=0){
+      const { dt, loopT: u, now } = stepTime();
+      ctx.clearRect(0,0,W,H);
+      drawGrid();
+      drawStreams((now - t0)/1000, frame);
+      drawWireframe(u);
+      ctx.font = `${Math.max(11, Math.floor(W/160))}px Consolas, Menlo, Monaco, monospace`;
+      for(let i=0;i<P_COUNT;i++){
+        const p = particles[i];
+        p.x = (p.x + p.vx * dt + W + 40) % (W + 40);
+        p.y = (p.y + p.vy * dt + H + 40) % (H + 40);
+        const txy = blendedTarget(u, i);
+        const ax = (txy[0] - p.x) * (REDUCED? 1.1 : 1.8);
+        const ay = (txy[1] - p.y) * (REDUCED? 1.1 : 1.8);
+        p.vx = (p.vx + ax*dt) * (REDUCED? 0.93 : 0.91);
+        p.vy = (p.vy + ay*dt) * (REDUCED? 0.93 : 0.91);
+        p.t += dt*6;
+        const flick = 0.6 + 0.4*Math.sin(p.t + i*0.37);
+        ctx.save();
+        neonFill(`rgba(40,165,255,${0.75*flick})`, 12);
+        const ch = GLYPHS.charAt((i + frame) % GLYPHS.length);
+        ctx.fillText(ch, p.x, p.y);
+        ctx.restore();
+      }
+      requestAnimationFrame(() => tick(frame+1));
+    }
+
+    // Boot
+    resize(); initOnce();
+    window.addEventListener('resize', resize, { passive:true });
+    requestAnimationFrame(() => tick(0));
+  })();
+  </script>
+
+  <!-- === Production build tips ===
+    1) Move styles into /css/site.css and scripts into /js/site.js to cache better.
+    2) Minify with esbuild or terser: esbuild site.js --minify --bundle --sourcemap --outfile=site.min.js
+    3) Preload hero image: <link rel="preload" as="image" href="/img/profile.jpeg"> 
+    4) Generate real favicons + og-image and update URLs above.
+  -->
 </body>
 </html>
